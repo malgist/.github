@@ -71,7 +71,7 @@ Malgist follows a modular architecture distributed across the following reposito
 
 ## Hackathon Scope
 
-This MVP was developed for the **[Insert Hackathon Name]**.
+This MVP was developed for the **Mentle Global Hackethon 2025**.
 * **Implemented:** Core dashboard UI, Wallet connection, AI strategy generation flow, and Mantle network integration.
 * **In Progress:** Real-time on-chain data indexing and automated execution pipelines.
 
