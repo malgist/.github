@@ -2,7 +2,7 @@
 
 **AI-Driven, Non-Custodial DeFi Portfolio Management on Mantle Network.**
 
-![Dashboard Screenshot](landing.png)
+![Dashboard Screenshot](dashboard.png)
 
 ## Project Overview
 
