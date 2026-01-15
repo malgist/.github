@@ -1,77 +1,67 @@
-# Malgist 🛡️🤖
+# Malgist
 
-**AI-Powered, Non-Custodial DeFi Portfolio Management.**
+**AI-Driven, Non-Custodial DeFi Portfolio Management on Mantle Network.**
 
-> *Abstracting DeFi complexity with an intelligent decision layer. Your yield, optimized by AI, controlled by you.*
+![Dashboard Screenshot](path/to/screenshot.png)
 
-![Malgist Banner or Screenshot Placeholder](path/to/your/screenshot.png)
-*(Replace this line with a screenshot of your dashboard)*
+## Project Overview
 
-## 💡 The Problem
-DeFi today is fragmented and demanding. Users face:
-- **Fragmentation:** Jumping between multiple protocols (Aave, Lido, Compound) to track positions.
-- **Cognitive Load:** Constant monitoring of APYs, LTV ratios, and market conditions.
-- **Inefficiency:** Missing yield opportunities due to lack of time or expertise.
+Malgist is an intelligence layer designed to abstract the complexity of DeFi yield farming. It functions as a non-custodial decision support system that helps users construct, monitor, and optimize cross-protocol portfolios based on their specific risk profiles.
 
-## 🚀 What is Malgist?
-Malgist is not a custodian. It is an **intelligence layer** that sits on top of existing DeFi protocols. We use AI to understand your risk tolerance and financial goals, translating them into actionable, cross-protocol strategies.
+Unlike automated vaults that pool funds, Malgist keeps the user in control. The AI suggests strategies and rebalancing actions, but all transactions are executed directly from the user's wallet to the blockchain.
 
-We don't hold your keys. We give you the map and the compass; you drive the car.
+## The Problem
 
-## ✨ Key Features
+* **Fragmentation:** Liquidity is scattered across lending, staking, and LP protocols, making portfolio tracking difficult.
+* **Cognitive Load:** Optimizing yield requires constant monitoring of APY fluctuations, LTV ratios, and market risks.
+* **Manual Inefficiency:** Users often miss rebalancing opportunities due to the time and complexity required to analyze multiple protocols manually.
 
-### 🧠 AI-Driven Strategy
-- **Personalized Risk Profiles:** Input your goals (e.g., "Stable Yield," "Degen Mode") and get a tailored allocation strategy.
-- **Smart Rebalancing:** The AI monitors market conditions and suggests portfolio adjustments. It advises, but **you decide** to execute the transaction.
+## Core Features
 
-### 📊 Unified Dashboard
-- **Cross-Protocol View:** See all your positions (Lending, Staking, LP) in one clean interface.
-- **Performance Tracking:** Real-time view of actual vs. target allocations.
+* **Intent-Based Strategy:** Users define high-level goals (e.g., "Stable Yield," "Aggressive Growth"). The AI engine maps these intents to specific protocol allocations.
+* **Non-Custodial Architecture:** Malgist never holds user funds. The platform acts solely as an interface and calculation engine; the user retains full custody of their private keys.
+* **Unified Dashboard:** Aggregates positions from multiple protocols (Lending, Staking, DEXs) into a single performance view.
+* **Smart Rebalancing:** Continuous monitoring of on-chain data to detect suboptimal positions and suggest corrective transactions.
 
-### 🔒 Non-Custodial Architecture
-- **Wallet-Based Identity:** No sign-ups. Your wallet is your account.
-- **Direct Execution:** All transactions are executed directly from your wallet to the blockchain. Malgist never touches your funds.
+## Architecture & Repositories
 
-## 🛠️ Tech Stack
+Malgist follows a modular architecture distributed across the following repositories:
 
-- **Frontend:** Next.js, Tailwind CSS
-- **Web3 Integration:** Wagmi, Viem/Ethers.js, RainbowKit
-- **AI/LLM:** [Insert LLM Provider, e.g., OpenAI API / LangChain]
-- **Blockchain:** [Insert Network, e.g., Mantle Network, Ethereum]
+* **[malgist-app](https://github.com/malgist/malgist-app)** (Current): The primary interface and DApp logic (Next.js, Wagmi).
+* **[malgist-backend](https://github.com/malgist/malgist-backend)**: The off-chain computation engine and AI integration.
+* **[malgist-contract](https://github.com/malgist/malgist-contract)**: Solidity smart contracts deployed on Mantle Network.
 
-## 🏗️ How It Works
+## Tech Stack
 
-1.  **Connect Wallet:** User connects their Web3 wallet.
-2.  **Define Intent:** User selects a risk profile (e.g., "Conservative Yield").
-3.  **Strategy Generation:** AI analyzes available pools/protocols and suggests an allocation (e.g., 60% Aave USDC, 40% Lido stETH).
-4.  **Monitor & Optimize:** The dashboard tracks performance. If a protocol's APY drops or risk increases, Malgist suggests a rebalance.
+* **Frontend:** Next.js, TypeScript, Tailwind CSS
+* **Web3 Integration:** Wagmi, RainbowKit, Viem
+* **Backend/AI:** Python/Node.js (for off-chain logic and LLM orchestration)
+* **Blockchain:** Mantle Network
 
-## ⚡ Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18+)
-- Yarn or npm
+* Node.js (v18 or higher)
+* Yarn or npm
 
 ### Installation
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/your-username/malgist.git](https://github.com/your-username/malgist.git)
-    cd malgist
+    git clone [https://github.com/malgist/malgist-app.git](https://github.com/malgist/malgist-app.git)
+    cd malgist-app
     ```
 
 2.  Install dependencies:
     ```bash
     npm install
-    # or
-    yarn install
     ```
 
-3.  Set up environment variables:
-    Create a `.env.local` file and add your API keys:
+3.  Configure environment variables:
+    Rename `.env.example` to `.env.local` and populate the required keys:
     ```bash
-    NEXT_PUBLIC_WALLET_CONNECT_ID=your_id
-    NEXT_PUBLIC_AI_API_KEY=your_api_key
+    NEXT_PUBLIC_WALLET_CONNECT_ID=your_id_here
+    NEXT_PUBLIC_API_URL=your_backend_url
     ```
 
 4.  Run the development server:
@@ -79,18 +69,12 @@ We don't hold your keys. We give you the map and the compass; you drive the car.
     npm run dev
     ```
 
-5.  Open [http://localhost:3000](http://localhost:3000) with your browser.
+## Hackathon Scope
 
-## 🏆 Hackathon Progress
-This MVP was built during the **[Insert Hackathon Name]**.
-- ✅ **Core UX/UI:** Fully responsive dashboard implemented.
-- ✅ **Wallet Integration:** Seamless connection and state management.
-- ✅ **Strategy Engine:** Basic AI prompt engineering for portfolio allocation.
-- 🚧 **Real-time Analytics:** (In Progress) Deep integration with on-chain data indexers.
+This MVP was developed for the **[Insert Hackathon Name]**.
+* **Implemented:** Core dashboard UI, Wallet connection, AI strategy generation flow, and Mantle network integration.
+* **In Progress:** Real-time on-chain data indexing and automated execution pipelines.
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+## License
 
----
-
-*Built with ❤️ for the DeFi Community.*
+Distributed under the MIT License.
