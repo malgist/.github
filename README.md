@@ -4,8 +4,7 @@
 
 > *Abstracting DeFi complexity with an intelligent decision layer. Your yield, optimized by AI, controlled by you.*
 
-![Malgist Banner or Screenshot Placeholder](path/to/your/screenshot.png)
-*(Replace this line with a screenshot of your dashboard)*
+https://www.canva.com/design/DAG-fXisDEY/VRyT_EeXr7Ra_EnvEDTE-w/edit 
 
 ## 💡 The Problem
 DeFi today is fragmented and demanding. Users face:
